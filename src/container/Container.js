@@ -148,6 +148,7 @@ const Container = () => {
 
     return ( 
         <>
+        <body>
         <header>
         <img id="logo" src={logo} alt="hp_logo"></img>
         <h1>Guess who?</h1>
@@ -172,6 +173,7 @@ const Container = () => {
         </main>
 
         <footer></footer>
+        </body>
         </>
      );
 }
