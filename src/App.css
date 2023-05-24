@@ -1,0 +1,22 @@
+html{
+    background-color: beige;
+}
+
+header {
+    background-color: rgb(206, 141, 206);
+}
+
+#root {
+    background-color: white;
+    padding: 30px;
+    margin:  20px;
+}
+
+footer {
+    background-color: blue;
+}
+
+#logo {
+    width: 200px;
+    height: 100px;
+}

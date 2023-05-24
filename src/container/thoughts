@@ -1,0 +1,8 @@
+when game has started, and random character.image has been
+shown, take note the character.id 
+
+whe the right answer has been picked,
+pick another character.id at random and render
+character.image
+
+but make sure that it is not the current character.
