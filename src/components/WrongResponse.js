@@ -3,7 +3,7 @@ const WrongResponse = () => {
     return ( 
         <>
             <h2>
-               Wrong answer! -1 point for 'house'. Try again!
+               Wrong answer! -1 point! Try again!
             </h2>
         </>
      );

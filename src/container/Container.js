@@ -155,6 +155,8 @@ const Container = () => {
         </header>
 
         <main>
+        {/* TO-DO: implement houseFormComponent here */}
+        {/* TO-DO: implement "start game button" and when clicked --> gameComponent is shown */}
         {/* {showForm && <HouseForm />} */}
         
         {showCounter && <Counter counter={counter}/>}
