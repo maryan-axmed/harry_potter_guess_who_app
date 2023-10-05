@@ -17,6 +17,7 @@ const Container = () => {
     const [randomCharacter, setRandomCharacter] = useState({});
     const [counter, setCounter] = useState(0);
     const [showForm, setShowForm] = useState(true);
+    const [gameCanStart, setGameCanStart] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -50,11 +51,11 @@ const Container = () => {
 
 
         if (newGame === "false") {
-            // REMOVE 'START GAME' BUTTON WHEN GAME HAS STARTED:
-            startButton.style.display = "none";
+            // No longer needed as different approach taken: REMOVE 'START GAME' BUTTON WHEN GAME HAS STARTED:
+            // startButton.style.display = "none";
 
             // REMOVE HOUSE FORM WHEN GAME HAS STARTED:
-            setShowForm(false);
+            // setShowForm(false);
 
 
             // GET RANDOM CHARACTER IMAGE WHEN GAME HAS STARTED
@@ -70,16 +71,16 @@ const Container = () => {
             console.log(randomCharacter.name);
 
 
-            // SHOW COUNTER WHEN GAME HAS STARTED:
-            setShowCounter(true);
+            // No longer needed as different approach taken: SHOW COUNTER WHEN GAME HAS STARTED:
+            // setShowCounter(true);
 
             // SET QUESION/IMAGE INDEX TO BE AT ONE:
             setQuestion(randomCharacter.id);
             console.log("id ", randomCharacter.id);
 
-
-            // SHOW ANSWER LIST WHEN GAME HAS STARTED:
-            setShowList(true);
+            setGameCanStart(true);
+            // No longer needed as different approach taken: SHOW ANSWER LIST WHEN GAME HAS STARTED:
+            // setShowList(true);
         }
     }
 
@@ -157,11 +158,47 @@ const Container = () => {
 
                 <main>
                     {/* TO-DO: implement houseForm.js here */}
-                    <HouseForm startGame={startGame} />
+                    {/* <HouseForm startGame={startGame} /> */}
                     {/* TO-DO: implement "start game" button in houseForm.js  and when clicked --> game.js is shown */}
                     {/* {showForm && <HouseForm startGame={startGame} />} */}
+                    {!gameCanStart ?
+                        <HouseForm 
+                            startGame={startGame}
+                        />
+                        // <>
+                        //     <select id="house-dropdown" required>
+                        //         <option value="" disabled selected>Select your house</option>
+                        //         <option>Gryffindor</option>
+                        //         <option>Slytherin</option>
+                        //         <option>Ravenclaw</option>
+                        //         <option>Hufflepuff</option>
+                        //     </select>
 
-                    <Game
+                        //     {/* the original "enter" button is reduntant, as "start game" will handle everythig after the house has been picked*/}
+                        //     {/* REMOVE "ENTER" BUTTON */}
+                        //     {/* <button onClick={handleSubmission}>Enter</button> */}
+
+
+                        //     {/* need to make a coniditon using state, if dropdown was selected then button shown and game can start */}
+                        //     <button gamestarted="false" onClick={startGame}>Start Game!</button>
+                        // </>
+                        :
+                        <Game
+                            image={image}
+                            counter={counter}
+                            showList={showList}
+                            answers={answers}
+                            correctCharacter={correctCharacter}
+                            question={question}
+                            nextQuestion={nextQuestion}
+                            icrementCounter={icrementCounter}
+                            decreaseCounter={decreaseCounter}
+                        />
+
+
+                    }
+
+                    {/* <Game
                         image={image}
                         counter={counter}
                         showList={showList}
@@ -171,7 +208,7 @@ const Container = () => {
                         nextQuestion={nextQuestion}
                         icrementCounter={icrementCounter}
                         decreaseCounter={decreaseCounter}
-                    />
+                    /> */}
                     {/* <img id="character" src={image}/> */}
                     {/* {showCounter && <Counter counter={counter}/>} */}
                     {/* <button gamestarted= "false" onClick={startGame}>Start Game!</button> */}

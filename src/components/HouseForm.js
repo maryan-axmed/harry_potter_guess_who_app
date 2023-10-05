@@ -1,6 +1,6 @@
 const input = document.getElementsByName("house");
 
-const HouseForm = ({handleFormValidation, startGame}) => {
+const HouseForm = ({props, handleFormValidation, startGame}) => {
     // get value and pass information to game.js
 
 
