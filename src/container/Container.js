@@ -3,7 +3,7 @@ import List from "../components/List";
 import logo from "./Harry-potter-Logo.png"
 import Counter from "../components/Counter";
 import HouseForm from "../components/HouseForm";
-
+import Title from "../components/Title";
 const Container = () => {
 
     const [listOfCharacters, setListOfCharacters] = useState([]);
@@ -150,13 +150,13 @@ const Container = () => {
         <>
         <body>
         <header>
-        <img id="logo" src={logo} alt="hp_logo"></img>
-        <h1>Guess who?</h1>
+        <Title />
         </header>
 
         <main>
-        {/* TO-DO: implement houseFormComponent here */}
-        {/* TO-DO: implement "start game button" and when clicked --> gameComponent is shown */}
+        {/* TO-DO: implement title.js here */}
+        {/* TO-DO: implement houseForm.js here */}
+        {/* TO-DO: implement "start game" button in houseForm.js  and when clicked --> game.js is shown */}
         {/* {showForm && <HouseForm />} */}
         
         {showCounter && <Counter counter={counter}/>}
