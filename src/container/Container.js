@@ -18,6 +18,7 @@ const Container = () => {
     const [counter, setCounter] = useState(0);
     const [showForm, setShowForm] = useState(true);
     const [gameCanStart, setGameCanStart] = useState(false);
+    const [housePicked, setHousePicked] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -49,6 +50,7 @@ const Container = () => {
         const booleanInvented = !newGameStarting;
         startButton.setAttribute("gamestarted", booleanInvented);
 
+    
 
         if (newGame === "false") {
             // No longer needed as different approach taken: REMOVE 'START GAME' BUTTON WHEN GAME HAS STARTED:
@@ -164,24 +166,9 @@ const Container = () => {
                     {!gameCanStart ?
                         <HouseForm 
                             startGame={startGame}
+                            housePicked={housePicked}
+                            setHousePicked={setHousePicked}
                         />
-                        // <>
-                        //     <select id="house-dropdown" required>
-                        //         <option value="" disabled selected>Select your house</option>
-                        //         <option>Gryffindor</option>
-                        //         <option>Slytherin</option>
-                        //         <option>Ravenclaw</option>
-                        //         <option>Hufflepuff</option>
-                        //     </select>
-
-                        //     {/* the original "enter" button is reduntant, as "start game" will handle everythig after the house has been picked*/}
-                        //     {/* REMOVE "ENTER" BUTTON */}
-                        //     {/* <button onClick={handleSubmission}>Enter</button> */}
-
-
-                        //     {/* need to make a coniditon using state, if dropdown was selected then button shown and game can start */}
-                        //     <button gamestarted="false" onClick={startGame}>Start Game!</button>
-                        // </>
                         :
                         <Game
                             image={image}

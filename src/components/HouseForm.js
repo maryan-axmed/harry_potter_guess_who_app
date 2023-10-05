@@ -1,13 +1,18 @@
+import { useState } from "react";
+
 const input = document.getElementsByName("house");
 
-const HouseForm = ({props, handleFormValidation, startGame}) => {
-    // get value and pass information to game.js
+const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHousePicked}) => {
 
+    // get value and pass information to game.js
+    const handleHouseSelection = () => {
+        setHousePicked(true);
+    }
 
     return ( 
         <>
 
-            <select id="house-dropdown" required>
+            <select id="house-dropdown" required onChange={handleHouseSelection}>
                 <option value ="" disabled selected>Select your house</option>
                 <option>Gryffindor</option>
                 <option>Slytherin</option>
@@ -21,7 +26,10 @@ const HouseForm = ({props, handleFormValidation, startGame}) => {
 
 
             {/* need to make a coniditon using state, if dropdown was selected then button shown and game can start */}
-            <button gamestarted= "false" onClick={startGame}>Start Game!</button>
+            {housePicked ? 
+                <button gamestarted= "false" onClick={startGame}>Start Game!</button> 
+                :
+                <button disabled gamestarted= "false" onClick={startGame}>Start Game!</button> }
         </>
      );
 }
