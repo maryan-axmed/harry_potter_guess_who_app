@@ -4,7 +4,7 @@ const input = document.getElementsByName("house");
 
 const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHousePicked}) => {
 
-    // get value and pass information to game.js
+    // get house and pass information to game.js so that message can be personalised
     const handleHouseSelection = () => {
         setHousePicked(true);
     }
@@ -20,12 +20,6 @@ const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHous
                 <option>Hufflepuff</option>
             </select>
 
-            {/* the original "enter" button is reduntant, as "start game" will handle everythig after the house has been picked*/}
-            {/* REMOVE "ENTER" BUTTON */}
-            {/* <button onClick={handleSubmission}>Enter</button> */}
-
-
-            {/* need to make a coniditon using state, if dropdown was selected then button shown and game can start */}
             {housePicked ? 
                 <button gamestarted= "false" onClick={startGame}>Start Game!</button> 
                 :

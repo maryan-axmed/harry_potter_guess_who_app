@@ -154,15 +154,10 @@ const Container = () => {
         <>
             <body>
                 <header>
-                    {/* TO-DO: implement title.js here */}
                     <Title />
                 </header>
 
                 <main>
-                    {/* TO-DO: implement houseForm.js here */}
-                    {/* <HouseForm startGame={startGame} /> */}
-                    {/* TO-DO: implement "start game" button in houseForm.js  and when clicked --> game.js is shown */}
-                    {/* {showForm && <HouseForm startGame={startGame} />} */}
                     {!gameCanStart ?
                         <HouseForm 
                             startGame={startGame}
@@ -184,31 +179,6 @@ const Container = () => {
 
 
                     }
-
-                    {/* <Game
-                        image={image}
-                        counter={counter}
-                        showList={showList}
-                        answers={answers}
-                        correctCharacter={correctCharacter}
-                        question={question}
-                        nextQuestion={nextQuestion}
-                        icrementCounter={icrementCounter}
-                        decreaseCounter={decreaseCounter}
-                    /> */}
-                    {/* <img id="character" src={image}/> */}
-                    {/* {showCounter && <Counter counter={counter}/>} */}
-                    {/* <button gamestarted= "false" onClick={startGame}>Start Game!</button> */}
-
-                    {/* {showList && <List
-                        answers={answers}
-                        correctCharacter={correctCharacter}
-                        question={question}
-                        nextQuestion={nextQuestion}
-                        icrementCounter={icrementCounter}
-                        decreaseCounter={decreaseCounter}
-                    />
-                    } */}
                 </main>
             </body>
         </>

@@ -15,7 +15,7 @@ const Game = ({ image, counter, showList, answers, correctCharacter, question, n
                 icrementCounter={icrementCounter}
                 decreaseCounter={decreaseCounter} />
             <Counter counter={counter} />
-            <WrongResponse />
+            {/* <WrongResponse /> */}
         </>
     );
 }
