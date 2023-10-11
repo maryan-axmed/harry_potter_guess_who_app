@@ -3,6 +3,7 @@ import Questions from "./Questions";
 import WrongResponse from "./WrongResponse";
 
 const Game = ({ image, counter, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter}) => {
+
     return (
         <>
             <Questions 
@@ -13,7 +14,8 @@ const Game = ({ image, counter, showList, answers, correctCharacter, question, n
                 question={question}
                 nextQuestion={nextQuestion}
                 icrementCounter={icrementCounter}
-                decreaseCounter={decreaseCounter} />
+                decreaseCounter={decreaseCounter} 
+                counter = {counter}/>
             <Counter counter={counter} />
             {/* <WrongResponse /> */}
         </>
