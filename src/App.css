@@ -5,7 +5,7 @@ html{
 }
 
 header {
-    background-color: #f95959;
+    background-color: #bcbcbc;
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 4fr; 
@@ -36,7 +36,7 @@ main{
 }
 
 #root {
-    background-color: #455d7a;
+    background-color: #00ff04;
     margin:  20px;
 }
 
@@ -47,4 +47,8 @@ footer {
 #logo {
     width: 200px;
     height: 100px;
+}
+
+a:hover {
+    color: white;
 }

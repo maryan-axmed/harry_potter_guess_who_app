@@ -22,6 +22,10 @@ const Container = () => {
     const [housePicked, setHousePicked] = useState(false);
     const [minusPoint, setMinusPoint] = useState(0);
 
+
+    // this is for dark/light mode:
+    const [defaultLight, setDefaultLight] = useState(true);
+
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch("https://hp-api.onrender.com/api/characters");
@@ -163,6 +167,9 @@ const Container = () => {
             <body>
                 <header>
                     <Title />
+                    <br></br>
+                    {defaultLight ? <button>&#9789;</button> :  <button>&#9728;</button>}
+                 
                 </header>
 
                 <main>
