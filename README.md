@@ -15,6 +15,6 @@ Follow these instructions to run the project:
 This project is no way near finished and there are a few things I would like to improve on/add:
 1. Work on the visual aspect of the application.
 2. Work on creating multiple 'Guess Who?' games, using other external APIs.
-3. Use React Router for easier navigation.
+3. Use React Router for easier navigation of multiple games.
 
 
