@@ -5,6 +5,7 @@ import Counter from "../components/Counter";
 import HouseForm from "../components/HouseForm";
 import Title from "../components/Title";
 import Game from "../components/Game";
+import GameOver from "../components/GameOver";
 const Container = () => {
 
     const [listOfCharacters, setListOfCharacters] = useState([]);
@@ -19,6 +20,7 @@ const Container = () => {
     const [showForm, setShowForm] = useState(true);
     const [gameCanStart, setGameCanStart] = useState(false);
     const [housePicked, setHousePicked] = useState(false);
+    const [minusPoint, setMinusPoint] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -149,6 +151,12 @@ const Container = () => {
         }
     }
 
+    // end the game is the answer is incorrect 3 times:
+    const endGame = () => {
+        // set useState for minusPoint to 0
+        // with every wrong answer, +1 (in Answer.js)
+        // if accumaltor reachs 3, render a new component (gameOver)
+    }
 
     return (
         <>
@@ -165,6 +173,7 @@ const Container = () => {
                             setHousePicked={setHousePicked}
                         />
                         :
+                        (minusPoint === 3 ? <GameOver /> :
                         <Game
                             image={image}
                             counter={counter}
@@ -175,10 +184,24 @@ const Container = () => {
                             nextQuestion={nextQuestion}
                             icrementCounter={icrementCounter}
                             decreaseCounter={decreaseCounter}
+                            minusPoint = {minusPoint}
+                            setMinusPoint = {setMinusPoint}
                         />
-
-
+                        )
                     }
+                    {/* {minusPoint === 3 ? <GameOver /> :  <Game
+                            image={image}
+                            counter={counter}
+                            showList={showList}
+                            answers={answers}
+                            correctCharacter={correctCharacter}
+                            question={question}
+                            nextQuestion={nextQuestion}
+                            icrementCounter={icrementCounter}
+                            decreaseCounter={decreaseCounter}
+                            minusPoint = {minusPoint}
+                            setMinusPoint = {setMinusPoint}
+                        />} */}
                 </main>
             </body>
         </>

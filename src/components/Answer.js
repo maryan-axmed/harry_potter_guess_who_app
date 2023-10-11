@@ -1,4 +1,4 @@
-const Answer = ({name, correctCharacter, nextQuestion, icrementCounter, returnResponse, decreaseCounter }) => {
+const Answer = ({name, correctCharacter, nextQuestion, icrementCounter, returnResponse, decreaseCounter, minusPoint, setMinusPoint }) => {
 
     // this function should: 
     //  • stop the webpage reloading when it is clicked
@@ -19,6 +19,7 @@ const handleAnswerResponse = (e) => {
     } else if({name}.name !== correctCharacter.name){
         decreaseCounter();
         returnResponse(true);
+        setMinusPoint(minusPoint + 1)
     }
 }
 

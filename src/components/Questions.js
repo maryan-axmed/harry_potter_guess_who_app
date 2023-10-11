@@ -1,6 +1,6 @@
 import List from "./List";
 
-const Questions = ({ image, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter }) => {
+const Questions = ({ image, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint }) => {
     return (
         <>
             <img id="character" src={image} />
@@ -11,6 +11,8 @@ const Questions = ({ image, showList, answers, correctCharacter, question, nextQ
                 nextQuestion={nextQuestion}
                 icrementCounter={icrementCounter}
                 decreaseCounter={decreaseCounter}
+                minusPoint = {minusPoint}
+                setMinusPoint = {setMinusPoint}
             />
         </>
     );
