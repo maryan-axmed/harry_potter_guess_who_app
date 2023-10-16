@@ -143,6 +143,10 @@ const Container = () => {
         // getNames();
     }
 
+    const handleThemeChange = () => {
+        setDefaultLight(!defaultLight);
+    }
+
     // getNames will now wait for the correct character to be 
     // set to the new random character 
     useEffect(() => {
@@ -167,7 +171,11 @@ const Container = () => {
                 <header>
                     <Title />
                     <br></br>
-                    {defaultLight ? <button>&#9789;</button> :  <button>&#9728;</button>}
+                    {defaultLight ? 
+                        <button onClick={handleThemeChange}>&#9789;</button> 
+                        :  
+                        <button onClick={handleThemeChange}>&#9728;</button>
+                    }
                  
                 </header>
 

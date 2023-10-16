@@ -20,7 +20,12 @@ const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHous
                 <option>Hufflepuff</option>
             </select>
 
-            <a href="https://www.wizardingworld.com/news/discover-your-hogwarts-house-on-wizarding-world" target="_blank">&#8505;</a>
+            <div class="tooltip">&#8505;
+                <span class="tooltiptext">
+                    Find out your Hogwarts House <a href="https://www.wizardingworld.com/news/discover-your-hogwarts-house-on-wizarding-world" target="blank">here</a>.
+                </span>
+            </div>
+            
 
             {housePicked ? 
                 <button gamestarted= "false" onClick={startGame} id="start_game_button">Start Game!</button> 
