@@ -23,9 +23,9 @@ const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHous
             <a href="https://www.wizardingworld.com/news/discover-your-hogwarts-house-on-wizarding-world" target="_blank">&#8505;</a>
 
             {housePicked ? 
-                <button gamestarted= "false" onClick={startGame}>Start Game!</button> 
+                <button gamestarted= "false" onClick={startGame} id="start_game_button">Start Game!</button> 
                 :
-                <button disabled gamestarted= "false" onClick={startGame}>Start Game!</button> }
+                <button disabled gamestarted= "false" onClick={startGame} id="start_game_button">Start Game!</button> }
         </>
      );
 }

@@ -50,7 +50,8 @@ const Container = () => {
     // need to make sure that app goes through all the images in the list
 
     const startGame = () => {
-        const startButton = document.querySelector("button");
+        // const startButton = document.querySelector("button");
+        const startButton = document.getElementById("start_game_button");
         const newGame = startButton.getAttribute("gamestarted");
         const newGameStarting = newGame === "true";
         const booleanInvented = !newGameStarting;
@@ -86,7 +87,10 @@ const Container = () => {
             setQuestion(randomCharacter.id);
             console.log("id ", randomCharacter.id);
 
+            // BUG: this is not updating at all?
             setGameCanStart(true);
+            console.log(gameCanStart);
+            
             // No longer needed as different approach taken: SHOW ANSWER LIST WHEN GAME HAS STARTED:
             // setShowList(true);
         }
@@ -155,12 +159,7 @@ const Container = () => {
         }
     }
 
-    // end the game is the answer is incorrect 3 times:
-    const endGame = () => {
-        // set useState for minusPoint to 0
-        // with every wrong answer, +1 (in Answer.js)
-        // if accumaltor reachs 3, render a new component (gameOver)
-    }
+
 
     return (
         <>
