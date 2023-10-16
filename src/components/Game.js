@@ -2,7 +2,7 @@ import Counter from "./Counter";
 import Questions from "./Questions";
 import WrongResponse from "./WrongResponse";
 
-const Game = ({ image, counter, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, userHouse}) => {
+const Game = ({ image, counter, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, userHouse, setUserHouse}) => {
 
     return (
         <>
@@ -19,6 +19,7 @@ const Game = ({ image, counter, showList, answers, correctCharacter, question, n
                 minusPoint ={minusPoint}
                 setMinusPoint = {setMinusPoint}
                 userHouse = {userHouse}
+                setUserHouse= {setUserHouse}
             />
             <Counter 
                 counter={counter} 

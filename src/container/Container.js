@@ -21,7 +21,7 @@ const Container = () => {
     const [gameCanStart, setGameCanStart] = useState(false);
     const [housePicked, setHousePicked] = useState(false);
     const [minusPoint, setMinusPoint] = useState(0);
-    const [userHouse, setUserHouse] = useState('');
+    const [userHouse, setUserHouse] = useState("lol");
 
 
 
@@ -153,6 +153,7 @@ const Container = () => {
     // set to the new random character 
     useEffect(() => {
         getNames();
+        console.log(userHouse);
     }, [correctCharacter])
 
     const icrementCounter = () => {
@@ -203,6 +204,7 @@ const Container = () => {
                             decreaseCounter={decreaseCounter}
                             minusPoint = {minusPoint}
                             setMinusPoint = {setMinusPoint}
+                            setUserHouse = {setUserHouse}
                             userHouse = {userHouse}
                         />
                         )

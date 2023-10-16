@@ -1,6 +1,6 @@
 import List from "./List";
 
-const Questions = ({ image, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, counter, userHouse }) => {
+const Questions = ({ image, showList, answers, correctCharacter, question, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, counter, userHouse, setUserHouse }) => {
     return (
         <>
             <img id="character" src={image} />
@@ -14,6 +14,7 @@ const Questions = ({ image, showList, answers, correctCharacter, question, nextQ
                 minusPoint = {minusPoint}
                 setMinusPoint = {setMinusPoint}
                 counter = {counter}
+                setUserHouse = {setUserHouse}
                 userHouse = {userHouse}
             />
         </>

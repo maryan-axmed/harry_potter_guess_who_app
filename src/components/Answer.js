@@ -1,4 +1,6 @@
-const Answer = ({name, correctCharacter, nextQuestion, icrementCounter, returnResponse, decreaseCounter, minusPoint, setMinusPoint }) => {
+import { useEffect } from "react";
+
+const Answer = ({name, correctCharacter, nextQuestion, icrementCounter, returnResponse, decreaseCounter, minusPoint, setMinusPoint, setUserHouse, userHouse }) => {
 
     // this function should: 
     //  • stop the webpage reloading when it is clicked
@@ -11,17 +13,19 @@ const Answer = ({name, correctCharacter, nextQuestion, icrementCounter, returnRe
     //  • load a new image and a new multiple choice selection
 const handleAnswerResponse = (e) => {
     e.preventDefault();
-    if({name}.name == correctCharacter.name){
+    if(name == correctCharacter.name){
         console.log("right answer");
         nextQuestion();
         icrementCounter();
         returnResponse(false);
-    } else if({name}.name !== correctCharacter.name){
+    } else if(name !== correctCharacter.name){
+        console.log("wrong answer");
         decreaseCounter();
         returnResponse(true);
-        setMinusPoint(minusPoint + 1)
+        setMinusPoint(minusPoint + 1);
     }
 }
+
 
     return ( 
         <>
