@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const input = document.getElementsByName("house");
 
-const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHousePicked}) => {
+const HouseForm = ({handleFormValidation, startGame, housePicked, setHousePicked, setUserHouse}) => {
 
-    // get house and pass information to game.js so that message can be personalised
-    const handleHouseSelection = () => {
+    // use this useState to set the users house and pass down to WrongResponse.js.
+    // const [userHouse, setUserHouse] = useState("");
+
+    // get house and pass information to game.js so that message can be personalise
+    const handleHouseSelection = (e) => {
         setHousePicked(true);
+        setUserHouse(e.target.value);
     }
 
     return ( 
@@ -14,10 +18,10 @@ const HouseForm = ({props, handleFormValidation, startGame, housePicked, setHous
 
             <select id="house-dropdown" required onChange={handleHouseSelection}>
                 <option value ="" disabled selected>Select your house</option>
-                <option>Gryffindor</option>
-                <option>Slytherin</option>
-                <option>Ravenclaw</option>
-                <option>Hufflepuff</option>
+                <option value="Gryffindor" >Gryffindor</option>
+                <option value="Slytherin" >Slytherin</option>
+                <option value="Ravenclaw" >Ravenclaw</option>
+                <option value="Hufflepuff">Hufflepuff</option>
             </select>
 
             <div class="tooltip">&#8505;

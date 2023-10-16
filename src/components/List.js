@@ -2,7 +2,7 @@ import { useState } from "react";
 import Answer from "./Answer";
 import WrongResponse from "./WrongResponse";
 
-const List = ({answers, correctCharacter, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, counter}) => {
+const List = ({answers, correctCharacter, nextQuestion, icrementCounter, decreaseCounter, minusPoint, setMinusPoint, counter, userHouse}) => {
 
     const [showWrongResponse, setShowWrongResponse] = useState(false);
     // i need the 'Answer' component to show names of characters
@@ -37,7 +37,7 @@ const List = ({answers, correctCharacter, nextQuestion, icrementCounter, decreas
     return ( 
         <>
        {answerComponents}
-       {showWrongResponse && <WrongResponse counter ={counter} minusPoint= {minusPoint}/> }
+       {showWrongResponse && <WrongResponse counter ={counter} minusPoint= {minusPoint} userHouse = {userHouse}/> }
        
         </>
      );

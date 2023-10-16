@@ -21,6 +21,8 @@ const Container = () => {
     const [gameCanStart, setGameCanStart] = useState(false);
     const [housePicked, setHousePicked] = useState(false);
     const [minusPoint, setMinusPoint] = useState(0);
+    const [userHouse, setUserHouse] = useState('');
+
 
 
     // this is for dark/light mode:
@@ -185,6 +187,7 @@ const Container = () => {
                             startGame={startGame}
                             housePicked={housePicked}
                             setHousePicked={setHousePicked}
+                            setUserHouse = {setUserHouse}
                         />
                         :
                         (minusPoint === 3 ? <GameOver /> :
@@ -200,6 +203,7 @@ const Container = () => {
                             decreaseCounter={decreaseCounter}
                             minusPoint = {minusPoint}
                             setMinusPoint = {setMinusPoint}
+                            userHouse = {userHouse}
                         />
                         )
                     }
