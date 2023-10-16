@@ -171,20 +171,21 @@ const Container = () => {
     return (
         <>
             <body>
-                <header>
+                <header id="header">
                     <Title />
-                    <br></br>
-                    {defaultLight ? 
-                        <button onClick={handleThemeChange}>&#9789;</button> 
-                        :  
-                        <button onClick={handleThemeChange}>&#9728;</button>
-                    }
-                 
                 </header>
 
                 <main>
+                    {defaultLight ? 
+                            <button onClick={handleThemeChange}>&#9789;</button> 
+                            :  
+                            <button onClick={handleThemeChange}>&#9728;</button>
+                        }
+
+
                     {!gameCanStart ?
                         <HouseForm 
+                            id="inital_component"
                             startGame={startGame}
                             housePicked={housePicked}
                             setHousePicked={setHousePicked}
@@ -193,6 +194,7 @@ const Container = () => {
                         :
                         (minusPoint === 3 ? <GameOver /> :
                         <Game
+                            id="inital_component"
                             image={image}
                             counter={counter}
                             showList={showList}
