@@ -18,11 +18,13 @@ const handleAnswerResponse = (e) => {
         nextQuestion();
         icrementCounter();
         returnResponse(false);
+        console.log(userHouse);
     } else if(name !== correctCharacter.name){
         console.log("wrong answer");
         decreaseCounter();
         returnResponse(true);
         setMinusPoint(minusPoint + 1);
+        console.log(userHouse);
     }
 }
 

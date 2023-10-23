@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const input = document.getElementsByName("house");
 
-const HouseForm = ({handleFormValidation, startGame, housePicked, setHousePicked, setUserHouse}) => {
+const HouseForm = ({handleFormValidation, startGame, housePicked, setHousePicked, setUserHouse, userHouse}) => {
 
     // use this useState to set the users house and pass down to WrongResponse.js.
     // const [userHouse, setUserHouse] = useState("");

@@ -21,12 +21,13 @@ const Container = () => {
     const [gameCanStart, setGameCanStart] = useState(false);
     const [housePicked, setHousePicked] = useState(false);
     const [minusPoint, setMinusPoint] = useState(0);
-    const [userHouse, setUserHouse] = useState("lol");
+    const [userHouse, setUserHouse] = useState();
 
 
 
-    // this is for dark/light mode:
+    // this is for dark/light mode and css involved in this:
     const [defaultLight, setDefaultLight] = useState(true);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -95,6 +96,8 @@ const Container = () => {
             
             // No longer needed as different approach taken: SHOW ANSWER LIST WHEN GAME HAS STARTED:
             // setShowList(true);
+            console.log(userHouse);
+
         }
     }
 
@@ -147,13 +150,14 @@ const Container = () => {
 
     const handleThemeChange = () => {
         setDefaultLight(!defaultLight);
+        const bodyTheme = document.getElementById("theme");
+        
     }
 
     // getNames will now wait for the correct character to be 
     // set to the new random character 
     useEffect(() => {
         getNames();
-        console.log(userHouse);
     }, [correctCharacter])
 
     const icrementCounter = () => {
@@ -168,20 +172,20 @@ const Container = () => {
 
 
 
+
     return (
         <>
-            <body>
+            <body id="theme" dark-mode="false">
                 <header id="header">
                     <Title />
                 </header>
 
                 <main>
                     {defaultLight ? 
-                            <button onClick={handleThemeChange}>&#9789;</button> 
+                            <button id="btn" onClick={handleThemeChange}>&#9789;</button> 
                             :  
-                            <button onClick={handleThemeChange}>&#9728;</button>
+                            <button id="btn" onClick={handleThemeChange}>&#9728;</button>
                         }
-
 
                     {!gameCanStart ?
                         <HouseForm 
@@ -190,6 +194,7 @@ const Container = () => {
                             housePicked={housePicked}
                             setHousePicked={setHousePicked}
                             setUserHouse = {setUserHouse}
+                            userHouse = {userHouse}
                         />
                         :
                         (minusPoint === 3 ? <GameOver /> :
