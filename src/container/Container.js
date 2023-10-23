@@ -180,8 +180,7 @@ const Container = () => {
 
     return (
         <>
-            <main>
-
+            <div className="mainContainer">
                 <header id="header">
                     <div className="header-div">
                         <Title />
@@ -232,7 +231,7 @@ const Container = () => {
                 </body>
 
                 <footer className="footer"> Maryan Axmed </footer>
-            </main>
+            </div>
         </>
     );
 }
