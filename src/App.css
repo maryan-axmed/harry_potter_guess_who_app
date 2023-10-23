@@ -2,7 +2,15 @@ body {
  
 }
 
+#theme[dark-mode="false"]{
+  background-color: white;
+  color: black;
+}
 
+#theme[dark-mode="true"]{
+  background-color: black;
+  color: white;
+}
 
 #header {
 
@@ -21,7 +29,6 @@ body {
 }
 
 #logo {
-
 }
 
 h1 {

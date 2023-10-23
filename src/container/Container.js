@@ -151,7 +151,12 @@ const Container = () => {
     const handleThemeChange = () => {
         setDefaultLight(!defaultLight);
         const bodyTheme = document.getElementById("theme");
-        
+        const button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            const currentTheme = bodyTheme.getAttribute("dark-mode");
+            const newTheme = currentTheme === "true" ? "false" : "true";
+            bodyTheme.setAttribute("dark-mode", newTheme);
+        })
     }
 
     // getNames will now wait for the correct character to be 
