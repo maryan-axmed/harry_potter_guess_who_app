@@ -60,7 +60,7 @@ const Container = () => {
         const booleanInvented = !newGameStarting;
         startButton.setAttribute("gamestarted", booleanInvented);
 
-    
+
 
         if (newGame === "false") {
             // No longer needed as different approach taken: REMOVE 'START GAME' BUTTON WHEN GAME HAS STARTED:
@@ -93,7 +93,7 @@ const Container = () => {
             // BUG: this is not updating at all?
             setGameCanStart(true);
             console.log(gameCanStart);
-            
+
             // No longer needed as different approach taken: SHOW ANSWER LIST WHEN GAME HAS STARTED:
             // setShowList(true);
             console.log(userHouse);
@@ -180,62 +180,57 @@ const Container = () => {
 
     return (
         <>
-            <body id="theme" dark-mode="false">
+            <main>
+
                 <header id="header">
                     <Title />
                 </header>
 
-                <main>
-                    {defaultLight ? 
-                            <button id="btn" onClick={handleThemeChange}>&#9789;</button> 
-                            :  
-                            <button id="btn" onClick={handleThemeChange}>&#9728;</button>
-                        }
+                <body id="theme" dark-mode="false">
 
+                    <div id="dark-light-button"> 
+                    {defaultLight ?
+                        <button id="btn" onClick={handleThemeChange}>&#9789;</button>
+                        :
+                        <button id="btn" onClick={handleThemeChange}>&#9728;</button>
+                    }
+                    </div>
+                    <div id ="blank-space"></div>
+                    <div id="form-game">
                     {!gameCanStart ?
-                        <HouseForm 
+                        <HouseForm
                             id="inital_component"
                             startGame={startGame}
                             housePicked={housePicked}
                             setHousePicked={setHousePicked}
-                            setUserHouse = {setUserHouse}
-                            userHouse = {userHouse}
+                            setUserHouse={setUserHouse}
+                            userHouse={userHouse}
                         />
                         :
                         (minusPoint === 3 ? <GameOver /> :
-                        <Game
-                            id="inital_component"
-                            image={image}
-                            counter={counter}
-                            showList={showList}
-                            answers={answers}
-                            correctCharacter={correctCharacter}
-                            question={question}
-                            nextQuestion={nextQuestion}
-                            icrementCounter={icrementCounter}
-                            decreaseCounter={decreaseCounter}
-                            minusPoint = {minusPoint}
-                            setMinusPoint = {setMinusPoint}
-                            setUserHouse = {setUserHouse}
-                            userHouse = {userHouse}
-                        />
+                            <Game
+                                id="inital_component"
+                                image={image}
+                                counter={counter}
+                                showList={showList}
+                                answers={answers}
+                                correctCharacter={correctCharacter}
+                                question={question}
+                                nextQuestion={nextQuestion}
+                                icrementCounter={icrementCounter}
+                                decreaseCounter={decreaseCounter}
+                                minusPoint={minusPoint}
+                                setMinusPoint={setMinusPoint}
+                                setUserHouse={setUserHouse}
+                                userHouse={userHouse}
+                            />
                         )
                     }
-                    {/* {minusPoint === 3 ? <GameOver /> :  <Game
-                            image={image}
-                            counter={counter}
-                            showList={showList}
-                            answers={answers}
-                            correctCharacter={correctCharacter}
-                            question={question}
-                            nextQuestion={nextQuestion}
-                            icrementCounter={icrementCounter}
-                            decreaseCounter={decreaseCounter}
-                            minusPoint = {minusPoint}
-                            setMinusPoint = {setMinusPoint}
-                        />} */}
-                </main>
-            </body>
+                    </div>
+                </body>
+
+                <footer id="footer">Maryan Axmed</footer>
+            </main>
         </>
     );
 }

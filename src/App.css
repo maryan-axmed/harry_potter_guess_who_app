@@ -1,5 +1,15 @@
+main{
+  display: grid;
+  grid-template-areas: 
+    "a a a" 
+    "b b c" 
+    "d d d" ;
+    row-gap: 15px;
+    column-gap: 20px;
+}
+
 body {
- 
+
 }
 
 #theme[dark-mode="false"]{
@@ -13,7 +23,19 @@ body {
 }
 
 #header {
+  grid-area: a;
+}
 
+#form-game {
+  grid-area: c;
+}
+
+#blank-space {
+  grid-area: b;
+}
+
+#footer {
+  grid-area: d;
 }
 
 #guess-who {
@@ -39,9 +61,6 @@ h1 {
 
 
 
-main{
-  
-}
 
 
 
