@@ -2,65 +2,44 @@
 html{
   padding: 20px;
   display: grid;
-  grid-template-rows: 200px 400px 100px;
-  grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: 
     "a a a" 
     "c b c" 
     "d d d" ;
-    row-gap: 10px;
-    column-gap: 10px;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-rows: 20vh 60vh 10vh;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
-main {
-
-}
-
-body {
-
-}
-
-#header {
+.header-div {
   grid-area: a;
   border: red 2px solid;
+  padding: 10px;
+  margin: 5px;
 }
 
-#form-game {
+.form-game {
   grid-area: b;
   border: greenyellow 2px solid;
-
+  padding: 10px;
+  margin: 5px;
 }
 
-#blank-space {
+.blank-space {
   grid-area: c;
   border: blueviolet 2px solid;
-
+  padding: 10px;
+  margin: 5px;
 }
 
-#footer {
+.footer {
   grid-area: d;
   border: black 2px solid;
-
+  padding: 10px;
+  margin: 5px;
 }
 
-#guess-who {
-
-}
-
-#hp {
-
-}
-
-#inital_component{
-
-}
-
-#logo {
-}
-
-h1 {
-
-}
 
 
 

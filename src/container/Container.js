@@ -183,53 +183,55 @@ const Container = () => {
             <main>
 
                 <header id="header">
-                    <Title />
-                    <div id="dark-light-button"> 
-                    {defaultLight ?
-                        <button id="btn" onClick={handleThemeChange}>&#9789;</button>
-                        :
-                        <button id="btn" onClick={handleThemeChange}>&#9728;</button>
-                    }
+                    <div className="header-div">
+                        <Title />
+                        <div id="dark-light-button">
+                            {defaultLight ?
+                                <button id="btn" onClick={handleThemeChange}>&#9789;</button>
+                                :
+                                <button id="btn" onClick={handleThemeChange}>&#9728;</button>
+                            }
+                        </div>
                     </div>
                 </header>
 
                 <body id="theme" dark-mode="false">
-                    <div id ="blank-space"></div>
-                    <div id="form-game">
-                    {!gameCanStart ?
-                        <HouseForm
-                            id="inital_component"
-                            startGame={startGame}
-                            housePicked={housePicked}
-                            setHousePicked={setHousePicked}
-                            setUserHouse={setUserHouse}
-                            userHouse={userHouse}
-                        />
-                        :
-                        (minusPoint === 3 ? <GameOver /> :
-                            <Game
+                    <div className="blank-space"></div>
+                    <div className="form-game">
+                        {!gameCanStart ?
+                            <HouseForm
                                 id="inital_component"
-                                image={image}
-                                counter={counter}
-                                showList={showList}
-                                answers={answers}
-                                correctCharacter={correctCharacter}
-                                question={question}
-                                nextQuestion={nextQuestion}
-                                icrementCounter={icrementCounter}
-                                decreaseCounter={decreaseCounter}
-                                minusPoint={minusPoint}
-                                setMinusPoint={setMinusPoint}
+                                startGame={startGame}
+                                housePicked={housePicked}
+                                setHousePicked={setHousePicked}
                                 setUserHouse={setUserHouse}
                                 userHouse={userHouse}
                             />
-                        )
-                    }
+                            :
+                            (minusPoint === 3 ? <GameOver /> :
+                                <Game
+                                    id="inital_component"
+                                    image={image}
+                                    counter={counter}
+                                    showList={showList}
+                                    answers={answers}
+                                    correctCharacter={correctCharacter}
+                                    question={question}
+                                    nextQuestion={nextQuestion}
+                                    icrementCounter={icrementCounter}
+                                    decreaseCounter={decreaseCounter}
+                                    minusPoint={minusPoint}
+                                    setMinusPoint={setMinusPoint}
+                                    setUserHouse={setUserHouse}
+                                    userHouse={userHouse}
+                                />
+                            )
+                        }
                     </div>
-                    <div id ="blank-space"></div>
+                    <div className="blank-space"></div>
                 </body>
 
-                <footer id="footer">Maryan Axmed</footer>
+                <footer className="footer"> Maryan Axmed </footer>
             </main>
         </>
     );
