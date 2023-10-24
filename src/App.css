@@ -48,8 +48,11 @@
   text-align: center;
 }
 
-
-
+/* CSS for image sizing */
+#character{
+  width: 200px;
+  height: 200px;
+}
 
 /* CSS for light and dark theme */
 #theme[dark-mode="false"]{
