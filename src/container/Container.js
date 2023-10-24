@@ -181,21 +181,21 @@ const Container = () => {
     return (
         <>
             <div className="mainContainer">
-                <header id="header">
-                    <div className="header-div">
-                        <Title />
-                        <div id="dark-light-button">
-                            {defaultLight ?
-                                <button id="btn" onClick={handleThemeChange}>&#9789;</button>
-                                :
-                                <button id="btn" onClick={handleThemeChange}>&#9728;</button>
-                            }
-                        </div>
+                <header className="header-div">
+                    <Title />
+                    <div id="dark-light-button">
+                        {defaultLight ?
+                            <button id="btn" onClick={handleThemeChange}>&#9789;</button>
+                            :
+                            <button id="btn" onClick={handleThemeChange}>&#9728;</button>
+                        }
                     </div>
                 </header>
 
                 <body id="theme" dark-mode="false">
-                    <div className="blank-space"></div>
+
+                    <div className="blank-space-1">b</div>
+
                     <div className="form-game">
                         {!gameCanStart ?
                             <HouseForm
@@ -227,7 +227,8 @@ const Container = () => {
                             )
                         }
                     </div>
-                    <div className="blank-space"></div>
+
+                    <div className="blank-space-2">d</div>
                 </body>
 
                 <footer className="footer"> Maryan Axmed </footer>

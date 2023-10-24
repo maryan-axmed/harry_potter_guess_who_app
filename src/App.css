@@ -2,42 +2,50 @@
 .mainContainer{
   padding: 20px;
   display: grid;
-  grid-template-rows: 20vh 60vh 10vh;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20vh 60vh 8vh;
   grid-template-areas: 
     "a a a" 
-    "c b c" 
-    "d d d" ;
+    "b c d" 
+    "e e e" ;
   /* row-gap: 10px;
   column-gap: 10px; */
 }
 
-.header-div {
+.header-div{
   grid-area: a;
   border: red 2px solid;
   padding: 10px;
   margin: 5px;
 }
 
-.form-game {
-  grid-area: b;
+.form-game{
+  grid-area: c;
   border: greenyellow 2px solid;
   padding: 10px;
   margin: 5px;
 }
 
-.blank-space {
-  grid-area: c;
+.blank-space-1{
+  grid-area: b;
   border: blueviolet 2px solid;
   padding: 10px;
   margin: 5px;
 }
 
-.footer {
+.blank-space-2{
   grid-area: d;
+  border: rgb(255, 157, 0) 2px solid;
+  padding: 10px;
+  margin: 5px;
+}
+
+.footer{
+  grid-area: e;
   border: black 2px solid;
   padding: 10px;
   margin: 5px;
+  text-align: center;
 }
 
 
