@@ -192,7 +192,7 @@ const Container = () => {
                     </div>
                 </header>
 
-                <body id="theme" dark-mode="false">
+                {/* <div id="theme" dark-mode="false"> */}
 
                     <div className="blank-space-1">b</div>
 
@@ -229,7 +229,7 @@ const Container = () => {
                     </div>
 
                     <div className="blank-space-2">d</div>
-                </body>
+                {/* </div> */}
 
                 <footer className="footer"> Maryan Axmed </footer>
             </div>

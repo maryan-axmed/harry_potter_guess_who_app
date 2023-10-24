@@ -2,10 +2,10 @@
 .mainContainer{
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 20vh 60vh 8vh;
   grid-template-areas: 
-    "a a a" 
+  "a a a" 
     "b c d" 
     "e e e" ;
   /* row-gap: 10px;
@@ -19,19 +19,23 @@
   margin: 5px;
 }
 
-.form-game{
-  grid-area: c;
-  border: greenyellow 2px solid;
-  padding: 10px;
-  margin: 5px;
-}
-
 .blank-space-1{
   grid-area: b;
   border: blueviolet 2px solid;
   padding: 10px;
   margin: 5px;
 }
+
+/* need flexbox inside the form-game */
+.form-game{
+  grid-area: c;
+  border: greenyellow 2px solid;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 .blank-space-2{
   grid-area: d;
@@ -47,6 +51,7 @@
   margin: 5px;
   text-align: center;
 }
+
 
 /* CSS for image sizing */
 #character{
