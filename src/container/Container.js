@@ -180,9 +180,11 @@ const Container = () => {
 
     return (
         <>
-            <div className="mainContainer">
-                <header className="header-div">
+            <div className="mainContainer" id="theme" dark-mode="false">
+                <div className="header-div">
+                    <div className="title-box">
                     <Title />
+                    </div>
                     <div id="dark-light-button">
                         {defaultLight ?
                             <button id="btn" onClick={handleThemeChange}>&#9789;</button>
@@ -190,11 +192,11 @@ const Container = () => {
                             <button id="btn" onClick={handleThemeChange}>&#9728;</button>
                         }
                     </div>
-                </header>
+                </div>
 
                 {/* <div id="theme" dark-mode="false"> */}
 
-                    <div className="blank-space-1">b</div>
+                    <div className="blank-space-1"></div>
 
                     <div className="form-game">
                         {!gameCanStart ?
@@ -228,7 +230,7 @@ const Container = () => {
                         }
                     </div>
 
-                    <div className="blank-space-2">d</div>
+                    <div className="blank-space-2"></div>
                 {/* </div> */}
 
                 <footer className="footer"> Maryan Axmed </footer>

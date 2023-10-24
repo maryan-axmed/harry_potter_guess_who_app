@@ -3,7 +3,7 @@
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 20vh 60vh 8vh;
+  grid-template-rows: 25vh 60vh 8vh;
   grid-template-areas: 
   "a a a" 
     "b c d" 
@@ -12,11 +12,15 @@
   column-gap: 10px; */
 }
 
+/* need flexbox inside the header */
 .header-div{
   grid-area: a;
   border: red 2px solid;
   padding: 10px;
   margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
 }
 
 .blank-space-1{
@@ -33,7 +37,7 @@
   padding: 10px;
   margin: 5px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
 }
 
 
