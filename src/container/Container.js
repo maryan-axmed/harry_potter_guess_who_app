@@ -176,6 +176,7 @@ const Container = () => {
     }
 
 
+    // TO-DO: const make a button that has the function restartGame
 
 
     return (
@@ -233,7 +234,7 @@ const Container = () => {
                     <div className="blank-space-2"></div>
                 {/* </div> */}
 
-                <footer className="footer"> Maryan Axmed </footer>
+                <footer className="footer"> Maryan </footer>
             </div>
         </>
     );
