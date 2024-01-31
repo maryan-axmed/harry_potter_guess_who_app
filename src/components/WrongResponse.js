@@ -13,7 +13,7 @@ const WrongResponse = (minusPoint, counter, userHouse) => {
     return ( 
         <>
             <h2>Wrong answer! Try again!</h2>
-            <p>{userHouse}</p> 
+            <p>try again</p> 
         </>
      );
 }
